@@ -16,8 +16,12 @@ struct Elemento
   float cantidadMicroGramos;
 };
 
+
+/*-------------------------------------------------------Prototipos de funciones---------------------------------------------*/
 void imprimirElemento(struct Elemento elemento);
 	
+
+/*---------------------------------------------------------Programa Principal------------------------------------------------*/
 int main(void)
 {
   struct Elemento reactivo1;
@@ -26,12 +30,15 @@ int main(void)
   // Para acceder a los elementos de una estructura, se utiliza el operador ' . ' (punto).
 
   // Inicializamos el reactivo 1
-  strcpy(reactivo1.nombre, "Wolframio");
+
+  // Recordar que para copiar cadenas debemos utilizar la funcion strcpy(char* destino, char* cadena).
+  strcpy(reactivo1.nombre, "Wolframio"); 
   reactivo1.numeroAtomico = 74;
   reactivo1.masaAtomica = 183.84;
   reactivo1.cantidadMicroGramos = 100000.0;
 
   // Inicializamos el reactivo 2
+
   strcpy(reactivo2.nombre, "Telurio");
   reactivo2.numeroAtomico = 52;
   reactivo2.masaAtomica = 127.60;
@@ -43,6 +50,8 @@ int main(void)
   return 0;
 }
 
+
+/*-----------------------------------------------------------Funciones-------------------------------------------------------*/
 void imprimirElemento(struct Elemento elemento)
 {
   printf("%s%s\n",   "Nombre del elemento: ", elemento.nombre);
