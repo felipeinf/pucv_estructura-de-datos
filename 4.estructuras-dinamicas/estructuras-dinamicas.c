@@ -42,6 +42,7 @@ struct FichaAtencionMedica
 /*-------------------------------------------------------Prototipos de funciones---------------------------------------------*/
 void crearPaciente(struct Paciente *ptrPaciente, char *rut, char *nombre, char *apellido, int prevision);
 void crearFicha(struct FichaAtencionMedica *ptrFicha, int id, struct Paciente *ptrPaciente, char *prescripcion);
+char *obtenerPrevision(int prevision);
 
 
 /*---------------------------------------------------------Programa Principal------------------------------------------------*/
@@ -85,4 +86,25 @@ void crearFicha(struct FichaAtencionMedica *ptrFicha, int id, struct Paciente *p
   ptrFicha->identificador = id;
   ptrFicha->paciente = ptrPaciente;
   ptrFicha->prescripcion = prescripcion;
+}
+
+char *obtenerPrevision(int prevision){
+  switch (prevision)
+  {
+    case Fonasa:
+      return "Fonasa";
+    break;
+    
+    case Isapre:
+      return "Isapre";
+    break;
+
+    case Ffaa:
+      return "Fuerzas armadas";
+    break;
+    
+    default:
+      return "Sin prevision";
+    break;
+  }
 }
