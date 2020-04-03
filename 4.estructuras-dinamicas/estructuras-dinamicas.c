@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------------------------------------------
-  Descripcion: Estructuras compuestas.
+  Descripcion: Estructuras dinamicas.
   Autor: Felipe Concha Almeida
   Asignatura: Estructura de datos [INF2240].
 ------------------------------------------------------------------------------------------------------------------------*/
@@ -43,6 +43,7 @@ struct FichaAtencionMedica
 void crearPaciente(struct Paciente *ptrPaciente, char *rut, char *nombre, char *apellido, int prevision);
 void crearFicha(struct FichaAtencionMedica *ptrFicha, int id, struct Paciente *ptrPaciente, char *prescripcion);
 char *obtenerPrevision(int prevision);
+void mostrarFicha(struct FichaAtencionMedica ficha);
 
 
 /*---------------------------------------------------------Programa Principal------------------------------------------------*/
@@ -61,6 +62,10 @@ int main(void)
   // Otra de las mayores ventajas de trabajar con un puntero al paciente en la ficha, es que si tenemos que hacer un cambio
   // en los datos de cualquier paciente, bastara con hacerlo una sola vez accediendo con su direccion de memoria. Por el contrario,
   // si tuvieramos la estructura paciente propiamente tal en la ficha, tendriamos que hacer los cambios en cada una de sus fichas.
+
+  mostrarFicha(ficha1);
+  mostrarFicha(ficha2);
+  mostrarFicha(ficha3);
 
   return 0;
 }
@@ -107,4 +112,21 @@ char *obtenerPrevision(int prevision){
       return "Sin prevision";
     break;
   }
+}
+
+void mostrarFicha(struct FichaAtencionMedica ficha)
+{
+  // Creamos una variable auxiliar para mayor legibilidad.
+  struct Paciente *punteroPaciente = ficha.paciente; 
+  
+  // El numero en el identificador de formato "%40s" indica la cantidad de espacios que ocupara el dato en la impresion.
+  printf("%40s%d\n", "FICHA Nº ", ficha.identificador);
+  
+  printf(" %s\n", "DATOS DEL PACIENTE");
+  printf("  %s%s %s\n", "Nombre completo del paciente: ", punteroPaciente->nombre, punteroPaciente->apellido); 
+  printf("  %s%s\n",    "RUT del paciente: ", punteroPaciente->rut);
+  printf("  %s%s\n\n",  "Prevision: ", obtenerPrevision(punteroPaciente->prevision));
+  
+  printf(" %s\n", "PRESCRIPCION");
+  printf("  %s\n\n\n", ficha.prescripcion);
 }
