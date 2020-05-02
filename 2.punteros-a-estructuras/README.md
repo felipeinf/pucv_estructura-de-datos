@@ -1,5 +1,5 @@
 # Punteros a estructuras [INF2240]
-### [Ejecuta este código online 💻](https://rextester.com/UPKZ30689)
+### [Ejecuta este código online 💻](https://rextester.com/FXSB68207)
 
 Output:
 
