@@ -1,5 +1,5 @@
 # Estructuras dinámicas [INF2240]
-### [Ejecuta este código online 💻](https://rextester.com/ZIA94046)
+### [Ejecuta este código online 💻](https://rextester.com/PJWZ40403)
 
 Output:
 
