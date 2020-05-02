@@ -8,12 +8,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-struct Reactivo
-{
-  struct Elemento elemento;
-  float cantidadMicroGramos;
-};
-
 struct Elemento
 { 
   char nombre[32];
@@ -21,6 +15,11 @@ struct Elemento
   float masaAtomica;
 };
 
+struct Reactivo
+{
+  struct Elemento elemento;
+  float cantidadMicroGramos;
+};
 
 /*-------------------------------------------------------Prototipos de funciones---------------------------------------------*/
 void crearReactivo( struct Reactivo *punteroReactivo, float cantidad, char *nombre, int numeroAtomico, float masaAtomica);
