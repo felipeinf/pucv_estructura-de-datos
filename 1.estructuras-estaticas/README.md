@@ -1,5 +1,5 @@
 # Implementación de estructuras estáticas [INF2240]
-### [Ejecuta este código online 💻](https://rextester.com/KVXVS26167)
+### [Ejecuta este código online 💻](https://rextester.com/LTP80848)
 
 Output:
 
