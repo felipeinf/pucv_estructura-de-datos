@@ -1,5 +1,5 @@
 # Estructuras compuestas [INF2240]
-### [Ejecuta este código online 💻](https://rextester.com/KWQLV51278)
+### [Ejecuta este código online 💻](https://rextester.com/MZCKN25327)
 
 Output:
 
